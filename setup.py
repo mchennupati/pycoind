@@ -61,7 +61,7 @@ class Tests(Command):
         self.announce("Running %s..." % filename, log.INFO)
         try:
             execfile(path)
-        except Exception, e:
+        except Exception as e:
             self.announce('Test case failed: %s (%r)' % (filename, e), log.FATAL)
             raise e
 
